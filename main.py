@@ -31,7 +31,7 @@ def add_task():
 
 
 def mark_task_as_completed():
-    pass
+    r
 def view_tasks():
     pass
 if __name__ == '__main__':
