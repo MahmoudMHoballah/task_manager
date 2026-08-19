@@ -8,7 +8,7 @@ Welcome To Task Manager
 3. View Tasks
 4. Quit'''
         print(message)
-        user_input = input('Enter A choice')
+        user_input = input('Enter A choice ')
         if user_input == '1':
             add_task()
         elif user_input == '2':
@@ -18,10 +18,18 @@ Welcome To Task Manager
         elif user_input == '4':
             break
         else:
-            print('Enter Number Between 1 To 4')
+            print('Enter Number Between 1 To 4 ')
 
 def add_task():
-    pass
+    task_input = input('Enter A Task ')
+    task_info = {
+'task' : task_input,
+'completed' : False 
+        }
+    tasks.append(task_info)
+    print('Tasks Added Successfully ')
+
+
 def mark_task_as_completed():
     pass
 def view_tasks():
