@@ -31,8 +31,24 @@ def add_task():
 
 
 def mark_task_as_completed():
-    r
+    in_completed_task = [task for task in tasks if task['completed'] == False]
+    if not in_completed_task:
+        print('No Task To Mark It')
+        return
+    for i , task in enumerate(in_completed_task):
+        print(f'{i+1}. {task['task']}')
+        print('-' * 30)
+    task_number = int(input('Enter Number Of Task To Complete'))
+    in_completed_task[task_number-1]['completed'] = True
+    print('Task Completed')
+
 def view_tasks():
-    pass
+    if not tasks:
+        print('No Tasks To View')
+        return
+    for i , task in enumerate(tasks):
+        status = "✅" if task["completed"] else "❌"
+        print(f'{i+1}. {task["task"]} {status}')
+        print('-' * 20 )
 if __name__ == '__main__':
     main()
